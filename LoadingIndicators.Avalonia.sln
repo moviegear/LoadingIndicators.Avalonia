@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadingIndicators.Avalonia", "LoadingIndicators.Avalonia\LoadingIndicators.Avalonia.csproj", "{DB66863F-11DD-4E3A-B92D-76DA502E3BA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadingIndicators.Avalonia", "LoadingIndicators.Avalonia\LoadingIndicators.Avalonia.csproj", "{A39D24EB-7F32-45BF-A49C-6B7BB1670146}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadingIndicators.Avalonia.Demo", "LoadingIndicators.Avalonia.Demo\LoadingIndicators.Avalonia.Demo.csproj", "{50C60651-10EF-4E24-92F7-A90D99CCB994}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DB66863F-11DD-4E3A-B92D-76DA502E3BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB66863F-11DD-4E3A-B92D-76DA502E3BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB66863F-11DD-4E3A-B92D-76DA502E3BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB66863F-11DD-4E3A-B92D-76DA502E3BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A39D24EB-7F32-45BF-A49C-6B7BB1670146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39D24EB-7F32-45BF-A49C-6B7BB1670146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39D24EB-7F32-45BF-A49C-6B7BB1670146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39D24EB-7F32-45BF-A49C-6B7BB1670146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50C60651-10EF-4E24-92F7-A90D99CCB994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50C60651-10EF-4E24-92F7-A90D99CCB994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50C60651-10EF-4E24-92F7-A90D99CCB994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50C60651-10EF-4E24-92F7-A90D99CCB994}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

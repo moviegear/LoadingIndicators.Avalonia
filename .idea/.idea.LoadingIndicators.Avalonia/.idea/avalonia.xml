@@ -3,6 +3,8 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="LoadingIndicators.Avalonia.Demo/App.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
+        <entry key="LoadingIndicators.Avalonia.Demo/MainWindow.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
       </map>
     </option>
   </component>
