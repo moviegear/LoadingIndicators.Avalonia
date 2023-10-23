@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <OutputType>WinExe</OutputType>
@@ -8,6 +7,11 @@
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+        <StripSymbols>true</StripSymbols>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DebugType>none</DebugType>
     </PropertyGroup>
 
     <ItemGroup>
@@ -22,5 +26,4 @@
     <ItemGroup>
         <ProjectReference Include="..\LoadingIndicators.Avalonia\LoadingIndicators.Avalonia.csproj"/>
     </ItemGroup>
-
 </Project>

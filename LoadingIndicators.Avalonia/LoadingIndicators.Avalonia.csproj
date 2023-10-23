@@ -1,10 +1,28 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.1;net7.0</TargetFrameworks>
+        <TargetFrameworks>net7.0;net6.0;netstandard2.1</TargetFrameworks>
         <LangVersion>latest</LangVersion>
+        <ImplicitUsings>true</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>11.0.5</Version>
+        <Authors>moviegear</Authors>
+        <Description>LoadingIndicators.Avalonia is an adaptation for Avalonia of the LoadingIndicators.WPF collection of 9 animated loading indicators.</Description>
+        <Copyright>2023 moviegear</Copyright>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageProjectUrl>https://github.com/moviegear/LoadingIndicators.Avalonia/</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/moviegear/LoadingIndicators.Avalonia.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>Avalonia, loading, progress, activity</PackageTags>
+        <PackageId>LoadingIndicators.Avalonia</PackageId>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DebugType>none</DebugType>
     </PropertyGroup>
 
     <ItemGroup>
@@ -21,4 +39,14 @@
         <AvaloniaResource Include="Assets\**" />
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\LICENSE.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
 </Project>
