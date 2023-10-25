@@ -39,19 +39,19 @@
                             <ScaleTransform ScaleX="0.5" ScaleY="0.5" />
                         </Grid.RenderTransform>
 
-                        <Grid.Styles>
-                            <Style Selector="Ellipse">
-                                <Setter Property="Width" Value="20" />
-                                <Setter Property="Height" Value="20" />
-                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
-                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
-                            </Style>
-                        </Grid.Styles>
-
                         <Border Background="{TemplateBinding Background}">
                             <Grid ColumnDefinitions="Auto,5,Auto,5,Auto"
                                   Width="70"
                                   Height="70">
+
+                                <Grid.Styles>
+                                    <Style Selector="Ellipse">
+                                        <Setter Property="Width" Value="20" />
+                                        <Setter Property="Height" Value="20" />
+                                        <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                        <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                    </Style>
+                                </Grid.Styles>
 
                                 <Ellipse x:Name="Ellipse0"
                                          Grid.Column="0"

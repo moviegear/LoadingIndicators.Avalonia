@@ -45,7 +45,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Canvas#Canvas0">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:3.000"
+                                        <Animation Duration="0:0:2.000"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
 
@@ -53,7 +53,7 @@
                                                 <Setter Property="RotateTransform.Angle" Value="0" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:3.000">
+                                            <KeyFrame KeyTime="0:0:2.000">
                                                 <Setter Property="RotateTransform.Angle" Value="360" />
                                             </KeyFrame>
                                         </Animation>
@@ -93,7 +93,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Canvas#Canvas1">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:2.000"
+                                        <Animation Duration="0:0:1.000"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
 
@@ -101,7 +101,7 @@
                                                 <Setter Property="RotateTransform.Angle" Value="0" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:2.000">
+                                            <KeyFrame KeyTime="0:0:1.000">
                                                 <Setter Property="RotateTransform.Angle" Value="-360" />
                                             </KeyFrame>
                                         </Animation>
