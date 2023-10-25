@@ -8,5 +8,6 @@
         <ResourceInclude Source="Themes/DoubleBounce.axaml" />
         <ResourceInclude Source="Themes/FlipPlane.axaml" />
         <ResourceInclude Source="Themes/Pulse.axaml" />
+        <ResourceInclude Source="Themes/Ring.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -1,0 +1,337 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="using:LoadingIndicators.Avalonia">
+
+    <Design.PreviewWith>
+        <Border Width="128" Height="128" Background="#333333">
+            <c:LoadingIndicator Width="100"
+                                Height="100"
+                                Foreground="#CC119EDA"
+                                Mode="Ring"
+                                Theme="{DynamicResource Ring}"
+                                BorderBrush="DarkRed"
+                                BorderThickness="1"
+                                IsActive="True"
+                                SpeedRatio="1" />
+        </Border>
+    </Design.PreviewWith>
+
+    <ControlTheme x:Key="Ring" TargetType="c:LoadingIndicator">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{TemplateBinding Foreground}" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="MinWidth" Value="64" />
+        <Setter Property="MinHeight" Value="64" />
+        <Setter Property="IsHitTestVisible" Value="False" />
+        <Setter Property="ClipToBounds" Value="True" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border x:Name="PART_Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        IsVisible="{Binding $parent[c:LoadingIndicator].IsActive}">
+
+                    <Grid ColumnDefinitions="*,*,*,*,*"
+                          RowDefinitions="*,*,*,*,*"
+                          Background="Transparent">
+
+                        <Grid.RenderTransform>
+                            <ScaleTransform ScaleX="0.5" ScaleY="0.5" />
+                        </Grid.RenderTransform>
+
+                        <Grid.Styles>
+                            <Style Selector="Ellipse">
+                                <Setter Property="Width" Value="10" />
+                                <Setter Property="Height" Value="10" />
+                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                            </Style>
+                        </Grid.Styles>
+
+                        <Ellipse x:Name="Ellipse0"
+                                 Grid.Row="0" Grid.Column="2"
+                                 Grid.RowSpan="1" Grid.ColumnSpan="1"
+                                 Fill="{TemplateBinding Foreground}">
+
+                            <Ellipse.Styles>
+                                <Style Selector="c|LoadingIndicator:inactive /template/ Ellipse#Ellipse0" />
+
+                                <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse0">
+                                    <Style.Animations>
+                                        <Animation Duration="0:0:0.800"
+                                                   IterationCount="Infinite"
+                                                   SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+
+                                            <KeyFrame KeyTime="0:0:0.000">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.400">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="1" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="1" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.800">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+                                        </Animation>
+                                    </Style.Animations>
+                                </Style>
+                            </Ellipse.Styles>
+                        </Ellipse>
+
+                        <Ellipse x:Name="Ellipse1"
+                                 Grid.Row="0" Grid.Column="3"
+                                 Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                 Fill="{TemplateBinding Foreground}">
+
+                            <Ellipse.Styles>
+                                <Style Selector="c|LoadingIndicator:inactive /template/ Ellipse#Ellipse1" />
+
+                                <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse1">
+                                    <Style.Animations>
+                                        <Animation Duration="0:0:0.800"
+                                                   Delay="0:0:0.100"
+                                                   IterationCount="Infinite"
+                                                   SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+
+                                            <KeyFrame KeyTime="0:0:0.000">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.400">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="1" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="1" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.800">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+                                        </Animation>
+                                    </Style.Animations>
+                                </Style>
+                            </Ellipse.Styles>
+                        </Ellipse>
+
+                        <Ellipse x:Name="Ellipse2"
+                                 Grid.Row="2" Grid.Column="4"
+                                 Grid.RowSpan="1" Grid.ColumnSpan="1"
+                                 Fill="{TemplateBinding Foreground}">
+
+                            <Ellipse.Styles>
+                                <Style Selector="c|LoadingIndicator:inactive /template/ Ellipse#Ellipse2" />
+
+                                <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse2">
+                                    <Style.Animations>
+                                        <Animation Duration="0:0:0.800"
+                                                   Delay="0:0:0.200"
+                                                   IterationCount="Infinite"
+                                                   SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+
+                                            <KeyFrame KeyTime="0:0:0.000">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.400">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="1" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="1" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.800">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+                                        </Animation>
+                                    </Style.Animations>
+                                </Style>
+                            </Ellipse.Styles>
+                        </Ellipse>
+
+                        <Ellipse x:Name="Ellipse3"
+                                 Grid.Row="3" Grid.Column="3"
+                                 Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                 Fill="{TemplateBinding Foreground}">
+
+                            <Ellipse.Styles>
+                                <Style Selector="c|LoadingIndicator:inactive /template/ Ellipse#Ellipse3" />
+
+                                <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse3">
+                                    <Style.Animations>
+                                        <Animation Duration="0:0:0.800"
+                                                   Delay="0:0:0.300"
+                                                   IterationCount="Infinite"
+                                                   SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+
+                                            <KeyFrame KeyTime="0:0:0.000">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.400">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="1" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="1" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.800">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+                                        </Animation>
+                                    </Style.Animations>
+                                </Style>
+                            </Ellipse.Styles>
+                        </Ellipse>
+
+                        <Ellipse x:Name="Ellipse4"
+                                 Grid.Row="4" Grid.Column="2"
+                                 Grid.RowSpan="1" Grid.ColumnSpan="1"
+                                 Fill="{TemplateBinding Foreground}">
+
+                            <Ellipse.Styles>
+                                <Style Selector="c|LoadingIndicator:inactive /template/ Ellipse#Ellipse4" />
+
+                                <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse4">
+                                    <Style.Animations>
+                                        <Animation Duration="0:0:0.800"
+                                                   Delay="0:0:0.400"
+                                                   IterationCount="Infinite"
+                                                   SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+
+                                            <KeyFrame KeyTime="0:0:0.000">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.400">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="1" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="1" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.800">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+                                        </Animation>
+                                    </Style.Animations>
+                                </Style>
+                            </Ellipse.Styles>
+                        </Ellipse>
+
+                        <Ellipse x:Name="Ellipse5"
+                                 Grid.Row="3" Grid.Column="0"
+                                 Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                 Fill="{TemplateBinding Foreground}">
+
+                            <Ellipse.Styles>
+                                <Style Selector="c|LoadingIndicator:inactive /template/ Ellipse#Ellipse5" />
+
+                                <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse5">
+                                    <Style.Animations>
+                                        <Animation Duration="0:0:0.800"
+                                                   Delay="0:0:0.500"
+                                                   IterationCount="Infinite"
+                                                   SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+
+                                            <KeyFrame KeyTime="0:0:0.000">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.400">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="1" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="1" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.800">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+                                        </Animation>
+                                    </Style.Animations>
+                                </Style>
+                            </Ellipse.Styles>
+                        </Ellipse>
+
+                        <Ellipse x:Name="Ellipse6"
+                                 Grid.Row="2" Grid.Column="0"
+                                 Grid.RowSpan="1" Grid.ColumnSpan="1"
+                                 Fill="{TemplateBinding Foreground}">
+
+                            <Ellipse.Styles>
+                                <Style Selector="c|LoadingIndicator:inactive /template/ Ellipse#Ellipse6" />
+
+                                <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse6">
+                                    <Style.Animations>
+                                        <Animation Duration="0:0:0.800"
+                                                   Delay="0:0:0.600"
+                                                   IterationCount="Infinite"
+                                                   SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+
+                                            <KeyFrame KeyTime="0:0:0.000">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.400">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="1" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="1" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.800">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+                                        </Animation>
+                                    </Style.Animations>
+                                </Style>
+                            </Ellipse.Styles>
+                        </Ellipse>
+
+                        <Ellipse x:Name="Ellipse7"
+                                 Grid.Row="0" Grid.Column="0"
+                                 Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                 Fill="{TemplateBinding Foreground}">
+
+                            <Ellipse.Styles>
+                                <Style Selector="c|LoadingIndicator:inactive /template/ Ellipse#Ellipse7" />
+
+                                <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse7">
+                                    <Style.Animations>
+                                        <Animation Duration="0:0:0.800"
+                                                   Delay="0:0:0.700"
+                                                   IterationCount="Infinite"
+                                                   SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+
+                                            <KeyFrame KeyTime="0:0:0.000">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.400">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="1" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="1" />
+                                            </KeyFrame>
+
+                                            <KeyFrame KeyTime="0:0:0.800">
+                                                <Setter Property="ScaleTransform.ScaleX" Value="0" />
+                                                <Setter Property="ScaleTransform.ScaleY" Value="0" />
+                                            </KeyFrame>
+                                        </Animation>
+                                    </Style.Animations>
+                                </Style>
+                            </Ellipse.Styles>
+                        </Ellipse>
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>

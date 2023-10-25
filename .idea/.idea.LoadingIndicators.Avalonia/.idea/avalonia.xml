@@ -12,6 +12,7 @@
         <entry key="LoadingIndicators.Avalonia/Themes/DoubleBounce.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
         <entry key="LoadingIndicators.Avalonia/Themes/FlipPlane.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
         <entry key="LoadingIndicators.Avalonia/Themes/Pulse.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
+        <entry key="LoadingIndicators.Avalonia/Themes/Ring.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
       </map>
     </option>
   </component>
