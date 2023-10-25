@@ -9,5 +9,6 @@
         <ResourceInclude Source="Themes/FlipPlane.axaml" />
         <ResourceInclude Source="Themes/Pulse.axaml" />
         <ResourceInclude Source="Themes/Ring.axaml" />
+        <ResourceInclude Source="Themes/ThreeDots.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
