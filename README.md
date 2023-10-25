@@ -1,5 +1,4 @@
 # LoadingIndicators.Avalonia
-====================
 ![Demo](./.github/demo.gif)
 
 LoadingIndicators.Avalonia is an adaptation for Avalonia of the [LoadingIndicators.WPF](https://github.com/zeluisping/LoadingIndicators.WPF) collection of 9 animated loading indicators.
