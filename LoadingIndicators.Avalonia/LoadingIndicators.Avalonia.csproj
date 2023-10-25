@@ -6,7 +6,8 @@
         <Nullable>enable</Nullable>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>11.0.5</Version>
+        <Title>LoadingIndicators.Avalonia</Title>
+        <Version>11.0.5.1</Version>
         <Authors>moviegear</Authors>
         <Description>LoadingIndicators.Avalonia is an adaptation for Avalonia of the LoadingIndicators.WPF collection of 9 animated loading indicators.</Description>
         <Copyright>2023 moviegear</Copyright>
@@ -15,10 +16,15 @@
         <PackageProjectUrl>https://github.com/moviegear/LoadingIndicators.Avalonia/</PackageProjectUrl>
         <RepositoryUrl>https://github.com/moviegear/LoadingIndicators.Avalonia.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
+        <PackageIcon>icon.png</PackageIcon>
         <PackageTags>Avalonia, loading, progress, activity</PackageTags>
         <PackageId>LoadingIndicators.Avalonia</PackageId>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <PackageReleaseNotes>11.0.5.1
+- Corrected animation time.
+11.0.5
+- Initial release.</PackageReleaseNotes>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -40,6 +46,11 @@
     </ItemGroup>
 
     <ItemGroup>
+        <None Include="..\.github\icon.png">
+          <Pack>True</Pack>
+          <PackagePath>\</PackagePath>
+          <Link>icon.png</Link>
+        </None>
         <None Include="..\README.md">
             <Pack>True</Pack>
             <PackagePath>\</PackagePath>
