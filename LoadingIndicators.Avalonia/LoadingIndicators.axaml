@@ -6,5 +6,6 @@
         <ResourceInclude Source="Themes/Arcs.axaml" />
         <ResourceInclude Source="Themes/ArcsRing.axaml" />
         <ResourceInclude Source="Themes/DoubleBounce.axaml" />
+        <ResourceInclude Source="Themes/FlipPlane.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
