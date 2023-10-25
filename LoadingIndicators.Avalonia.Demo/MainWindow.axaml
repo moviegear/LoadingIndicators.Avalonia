@@ -25,5 +25,6 @@
         <c:LoadingIndicator Grid.Row="0" Grid.Column="2" Mode="ArcsRing" IsActive="True" />
         <c:LoadingIndicator Grid.Row="1" Grid.Column="0" Mode="DoubleBounce" IsActive="True" />
         <c:LoadingIndicator Grid.Row="1" Grid.Column="1" Mode="FlipPlane" IsActive="True" />
+        <c:LoadingIndicator Grid.Row="1" Grid.Column="2" Mode="Pulse" IsActive="True" />
     </Grid>
 </Window>
