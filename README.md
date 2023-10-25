@@ -1,6 +1,8 @@
 # LoadingIndicators.Avalonia
 ![Demo](./.github/demo.gif)
 
+[![NuGet](https://img.shields.io/nuget/dt/LoadingIndicators.Avalonia?label=nuget)](https://www.nuget.org/packages/LoadingIndicators.Avalonia)
+
 LoadingIndicators.Avalonia is an adaptation for Avalonia of the [LoadingIndicators.WPF](https://github.com/zeluisping/LoadingIndicators.WPF) collection of 9 animated loading indicators.
 
 ## Styles
