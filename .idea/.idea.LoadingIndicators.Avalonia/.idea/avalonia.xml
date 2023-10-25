@@ -6,6 +6,7 @@
         <entry key="LoadingIndicators.Avalonia.Demo/App.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
         <entry key="LoadingIndicators.Avalonia.Demo/MainWindow.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
         <entry key="LoadingIndicators.Avalonia/LoadingIndicators.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
+        <entry key="LoadingIndicators.Avalonia/Themes/Arc.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
       </map>
     </option>
   </component>

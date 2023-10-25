@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c="using:LoadingIndicators.Avalonia"
 
         d:DesignWidth="300" d:DesignHeight="300"
         Title="LoadingIndicators Demo"
@@ -10,7 +11,15 @@
         CanResize="False"
         WindowStartupLocation="CenterScreen">
 
+    <Window.Styles>
+        <Style Selector="c|LoadingIndicator">
+            <Setter Property="Foreground" Value="#CC119EDA" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="100" />
+        </Style>
+    </Window.Styles>
+
     <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*,*" Background="#222222">
-        
+        <c:LoadingIndicator Grid.Row="0" Grid.Column="0" Mode="Arc" IsActive="True" />
     </Grid>
 </Window>

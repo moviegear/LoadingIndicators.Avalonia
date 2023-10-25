@@ -2,6 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <ResourceDictionary.MergedDictionaries>
-        
+        <ResourceInclude Source="Themes/Arc.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
