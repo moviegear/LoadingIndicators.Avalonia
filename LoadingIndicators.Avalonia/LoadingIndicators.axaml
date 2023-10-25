@@ -4,5 +4,6 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceInclude Source="Themes/Arc.axaml" />
         <ResourceInclude Source="Themes/Arcs.axaml" />
+        <ResourceInclude Source="Themes/ArcsRing.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
