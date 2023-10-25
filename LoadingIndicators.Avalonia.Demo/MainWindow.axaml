@@ -28,5 +28,6 @@
         <c:LoadingIndicator Grid.Row="1" Grid.Column="2" Mode="Pulse" IsActive="True" />
         <c:LoadingIndicator Grid.Row="2" Grid.Column="0" Mode="Ring" IsActive="True" />
         <c:LoadingIndicator Grid.Row="2" Grid.Column="1" Mode="ThreeDots" IsActive="True" />
+        <c:LoadingIndicator Grid.Row="2" Grid.Column="2" Mode="Wave" IsActive="True" />
     </Grid>
 </Window>

@@ -10,5 +10,6 @@
         <ResourceInclude Source="Themes/Pulse.axaml" />
         <ResourceInclude Source="Themes/Ring.axaml" />
         <ResourceInclude Source="Themes/ThreeDots.axaml" />
+        <ResourceInclude Source="Themes/Wave.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

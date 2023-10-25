@@ -14,6 +14,7 @@
         <entry key="LoadingIndicators.Avalonia/Themes/Pulse.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
         <entry key="LoadingIndicators.Avalonia/Themes/Ring.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
         <entry key="LoadingIndicators.Avalonia/Themes/ThreeDots.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
+        <entry key="LoadingIndicators.Avalonia/Themes/Wave.axaml" value="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
       </map>
     </option>
   </component>
