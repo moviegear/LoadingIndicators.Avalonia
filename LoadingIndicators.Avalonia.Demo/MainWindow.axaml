@@ -21,5 +21,6 @@
 
     <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*,*" Background="#222222">
         <c:LoadingIndicator Grid.Row="0" Grid.Column="0" Mode="Arc" IsActive="True" />
+        <c:LoadingIndicator Grid.Row="0" Grid.Column="1" Mode="Arcs" IsActive="True" />
     </Grid>
 </Window>
