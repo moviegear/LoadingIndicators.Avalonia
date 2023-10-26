@@ -21,10 +21,6 @@
         <PackageId>LoadingIndicators.Avalonia</PackageId>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <PackageReleaseNotes>11.0.5.1
-- Corrected animation time.
-11.0.5
-- Initial release.</PackageReleaseNotes>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -60,4 +56,13 @@
             <PackagePath>\</PackagePath>
         </None>
     </ItemGroup>
+
+    <Target Name="PreparePackageReleaseNotesFromFile" BeforeTargets="GenerateNuspec">
+        <ReadLinesFromFile File="../RELEASE-NOTES.txt">
+            <Output TaskParameter="Lines" ItemName="ReleaseNoteLines" />
+        </ReadLinesFromFile>
+        <PropertyGroup>
+            <PackageReleaseNotes>$([System.IO.File]::ReadAllText("../RELEASE-NOTES.txt"))</PackageReleaseNotes>
+        </PropertyGroup>
+    </Target>
 </Project>
