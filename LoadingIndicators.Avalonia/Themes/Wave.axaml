@@ -34,7 +34,7 @@
                         CornerRadius="{TemplateBinding CornerRadius}"
                         IsVisible="{Binding $parent[c:LoadingIndicator].IsActive}">
 
-                    <Grid ColumnDefinitions="Auto,*,Auto,*,Auto,*,Auto,*,Auto"
+                    <Grid ColumnDefinitions="*,*,*,*,*,*,*,*,*"
                           Background="Transparent">
                         
                         <Grid.RenderTransform>
@@ -45,7 +45,6 @@
                             <Style Selector="Rectangle">
                                 <Setter Property="Width" Value="10" />
                                 <Setter Property="Height" Value="40" />
-                                <Setter Property="VerticalAlignment" Value="Stretch" />
                             </Style>
                         </Grid.Styles>
 
@@ -58,7 +57,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle0">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.440"
+                                        <Animation Duration="0:0:0.432"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
 
@@ -66,11 +65,11 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1.6" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.220">
+                                            <KeyFrame KeyTime="0:0:0.216">
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1.6" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.440">
+                                            <KeyFrame KeyTime="0:0:0.432">
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
                                         </Animation>
@@ -88,7 +87,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle1">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.440"
+                                        <Animation Duration="0:0:0.432"
                                                    Delay="0:0:0.050"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
@@ -97,11 +96,11 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1.6" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.220">
+                                            <KeyFrame KeyTime="0:0:0.216">
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1.6" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.440">
+                                            <KeyFrame KeyTime="0:0:0.432">
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
                                         </Animation>
@@ -119,7 +118,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle2">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.440"
+                                        <Animation Duration="0:0:0.432"
                                                    Delay="0:0:0.100"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
@@ -128,11 +127,11 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1.6" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.220">
+                                            <KeyFrame KeyTime="0:0:0.216">
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1.6" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.440">
+                                            <KeyFrame KeyTime="0:0:0.432">
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
                                         </Animation>
@@ -150,7 +149,7 @@
                                 
                                 <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle3">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.440"
+                                        <Animation Duration="0:0:0.432"
                                                    Delay="0:0:0.150"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
@@ -159,11 +158,11 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1.6" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.220">
+                                            <KeyFrame KeyTime="0:0:0.216">
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1.6" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.440">
+                                            <KeyFrame KeyTime="0:0:0.432">
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
                                         </Animation>
@@ -181,7 +180,7 @@
                                 
                                 <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle4">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.440"
+                                        <Animation Duration="0:0:0.432"
                                                    Delay="0:0:0.200"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
@@ -190,11 +189,11 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1.6" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.220">
+                                            <KeyFrame KeyTime="0:0:0.216">
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1.6" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.440">
+                                            <KeyFrame KeyTime="0:0:0.432">
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
                                         </Animation>

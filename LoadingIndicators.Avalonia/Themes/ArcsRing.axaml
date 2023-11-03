@@ -34,16 +34,6 @@
                         CornerRadius="{TemplateBinding CornerRadius}"
                         IsVisible="{Binding $parent[c:LoadingIndicator].IsActive}">
 
-                    <Border.Styles>
-                        <Style Selector="Canvas">
-                            <Setter Property="Opacity" Value="0.3" />
-                        </Style>
-
-                        <Style Selector="Path">
-                            <Setter Property="StrokeThickness" Value="10" />
-                        </Style>
-                    </Border.Styles>
-
                     <Grid Background="Transparent"
                           Width="64"
                           Height="64">
@@ -52,6 +42,17 @@
                             <ScaleTransform ScaleX="0.5" ScaleY="0.5" />
                         </Grid.RenderTransform>
 
+                        <Grid.Styles>
+                            <Style Selector="Canvas">
+                                <Setter Property="Opacity" Value="0.3" />
+                            </Style>
+
+                            <Style Selector="Path">
+                                <Setter Property="StrokeThickness" Value="10" />
+                            </Style>
+                        </Grid.Styles>
+
+                        <!-- 2.800 -->
                         <Canvas x:Name="Canvas0">
                             <Canvas.RenderTransform>
                                 <TranslateTransform X="12" Y="0" />

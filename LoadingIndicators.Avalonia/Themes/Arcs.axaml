@@ -67,7 +67,7 @@
                                 <Path.Data>
                                     <PathGeometry>
                                         <PathGeometry.Transform>
-                                            <TranslateTransform X="32" Y="-8" />
+                                            <TranslateTransform X="31" Y="-9" />
                                         </PathGeometry.Transform>
 
                                         <PathGeometry.Figures>
@@ -115,7 +115,7 @@
                                 <Path.Data>
                                     <PathGeometry>
                                         <PathGeometry.Transform>
-                                            <TranslateTransform X="5" Y="19" />
+                                            <TranslateTransform X="4" Y="18" />
                                         </PathGeometry.Transform>
 
                                         <PathGeometry.Figures>

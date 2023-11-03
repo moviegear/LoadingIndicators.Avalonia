@@ -61,7 +61,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse0">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.800"
+                                        <Animation Duration="0:0:0.8025"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
 
@@ -75,7 +75,7 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.800">
+                                            <KeyFrame KeyTime="0:0:0.8025">
                                                 <Setter Property="ScaleTransform.ScaleX" Value="0" />
                                                 <Setter Property="ScaleTransform.ScaleY" Value="0" />
                                             </KeyFrame>
@@ -95,7 +95,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse1">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.800"
+                                        <Animation Duration="0:0:0.8025"
                                                    Delay="0:0:0.100"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
@@ -110,7 +110,7 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.800">
+                                            <KeyFrame KeyTime="0:0:0.8025">
                                                 <Setter Property="ScaleTransform.ScaleX" Value="0" />
                                                 <Setter Property="ScaleTransform.ScaleY" Value="0" />
                                             </KeyFrame>
@@ -130,7 +130,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse2">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.800"
+                                        <Animation Duration="0:0:0.8025"
                                                    Delay="0:0:0.200"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
@@ -145,7 +145,7 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.800">
+                                            <KeyFrame KeyTime="0:0:0.8025">
                                                 <Setter Property="ScaleTransform.ScaleX" Value="0" />
                                                 <Setter Property="ScaleTransform.ScaleY" Value="0" />
                                             </KeyFrame>
@@ -165,7 +165,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse3">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.800"
+                                        <Animation Duration="0:0:0.8025"
                                                    Delay="0:0:0.300"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
@@ -180,7 +180,7 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.800">
+                                            <KeyFrame KeyTime="0:0:0.8025">
                                                 <Setter Property="ScaleTransform.ScaleX" Value="0" />
                                                 <Setter Property="ScaleTransform.ScaleY" Value="0" />
                                             </KeyFrame>
@@ -200,7 +200,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse4">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.800"
+                                        <Animation Duration="0:0:0.8025"
                                                    Delay="0:0:0.400"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
@@ -215,7 +215,7 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.800">
+                                            <KeyFrame KeyTime="0:0:0.8025">
                                                 <Setter Property="ScaleTransform.ScaleX" Value="0" />
                                                 <Setter Property="ScaleTransform.ScaleY" Value="0" />
                                             </KeyFrame>
@@ -235,7 +235,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse5">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.800"
+                                        <Animation Duration="0:0:0.8025"
                                                    Delay="0:0:0.500"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
@@ -250,7 +250,7 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.800">
+                                            <KeyFrame KeyTime="0:0:0.8025">
                                                 <Setter Property="ScaleTransform.ScaleX" Value="0" />
                                                 <Setter Property="ScaleTransform.ScaleY" Value="0" />
                                             </KeyFrame>
@@ -270,7 +270,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse6">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.800"
+                                        <Animation Duration="0:0:0.8025"
                                                    Delay="0:0:0.600"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
@@ -285,7 +285,7 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.800">
+                                            <KeyFrame KeyTime="0:0:0.8025">
                                                 <Setter Property="ScaleTransform.ScaleX" Value="0" />
                                                 <Setter Property="ScaleTransform.ScaleY" Value="0" />
                                             </KeyFrame>
@@ -305,7 +305,7 @@
 
                                 <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ellipse7">
                                     <Style.Animations>
-                                        <Animation Duration="0:0:0.800"
+                                        <Animation Duration="0:0:0.8025"
                                                    Delay="0:0:0.700"
                                                    IterationCount="Infinite"
                                                    SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
@@ -320,7 +320,7 @@
                                                 <Setter Property="ScaleTransform.ScaleY" Value="1" />
                                             </KeyFrame>
 
-                                            <KeyFrame KeyTime="0:0:0.800">
+                                            <KeyFrame KeyTime="0:0:0.8025">
                                                 <Setter Property="ScaleTransform.ScaleX" Value="0" />
                                                 <Setter Property="ScaleTransform.ScaleY" Value="0" />
                                             </KeyFrame>
