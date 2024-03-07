@@ -1,0 +1,65 @@
+{
+  "mainAssemblyName": "LoadingIndicators.Avalonia.Demo.Browser.dll",
+  "resources": {
+    "hash": "sha256-1OgPAXnyD7KDBI7dG5Vc13CCgOtgkRwLXmTqotoO2Qk=",
+    "jsModuleNative": {
+      "dotnet.native.js": "sha256-BdKmlgGdhc2tffUSqHW4nTVyhLuCaycYFwW84wDMxWc="
+    },
+    "jsModuleRuntime": {
+      "dotnet.runtime.js": "sha256-54KSaoOArNfygQbV+r4B5y3ys53v2tnvFIyZcZiUmi0="
+    },
+    "wasmNative": {
+      "dotnet.native.wasm": "sha256-VW3T0oSAtmbofN1jgGdvohHKYcIL/zDInd0VC3I0zrM="
+    },
+    "wasmSymbols": {
+      "dotnet.native.js.symbols": "sha256-7Q18a/xYWLf1YOPUJ5Rs2fw1nGQAzwKs8kU1WjNdKuE="
+    },
+    "icu": {
+      "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
+      "icudt_EFIGS.dat": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
+      "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
+    },
+    "assembly": {
+      "Avalonia.Base.wasm": "sha256-DOeP3umTOZA9FspI8evIGgvVidpm0oAK971R5SLdzgI=",
+      "Avalonia.Browser.wasm": "sha256-buRENcKhcAjDAdKFJaTibsoFrjzW/Co86RstOpn9ErA=",
+      "Avalonia.Controls.wasm": "sha256-KT6IPDSlRaC5D6+cMUhakA/nxiJkDVVftgZG0Iq+GSQ=",
+      "Avalonia.Dialogs.wasm": "sha256-bFEpCTcuuS15QzgSokqujcz6cnkWkXe6GXFU3f3WnQ8=",
+      "Avalonia.Fonts.Inter.wasm": "sha256-30erjO5WdT0nO3txpawKaZVRDD8n4o1W0xly1szVBkU=",
+      "Avalonia.Markup.wasm": "sha256-vgJICjfpy+tfP/vbA33Tk9NNoxyJr8c5P0yoxbxxrKo=",
+      "Avalonia.Markup.Xaml.wasm": "sha256-wN+y3EWFpnzCe2kgcWdUj+Px1Jy9Zy7wH4nWDWiZifc=",
+      "Avalonia.Metal.wasm": "sha256-BMyTH0GAelL46ORECQHjkRomwtaN4D3+vGpXvt9OUng=",
+      "Avalonia.OpenGL.wasm": "sha256-a7LEJEd44y0skf5hLG+Op+H88neGtQUanGXFWGFQUsM=",
+      "Avalonia.Skia.wasm": "sha256-cn5opGPwud5V1oL5B2d0RbuaVE3YdjbV8yxHnjVV8JQ=",
+      "Avalonia.Themes.Fluent.wasm": "sha256-macu118nOXPVIiWPefHD16c7yDZOwAZtln+RpKEfOBg=",
+      "HarfBuzzSharp.wasm": "sha256-zX4t+sWRXss+p87T0pFzCpDCUYA2WnN1mffgNZKzWZg=",
+      "LoadingIndicators.Avalonia.Demo.Browser.wasm": "sha256-bbqOWNGMYn9/k4gzDyc24oOJgk4W9tGdwrXLJKgck+Y=",
+      "LoadingIndicators.Avalonia.Demo.wasm": "sha256-pDc2TIVD10HRlFIxFrvd8c3L2QVcyCBpo/Sv70Mfdgg=",
+      "LoadingIndicators.Avalonia.wasm": "sha256-kFhpvoCGA9CkHx2lf1D8YsdtIJ62EVSqUAkzAWA38dE=",
+      "SkiaSharp.wasm": "sha256-GdPQBgnK+DVhmR4289oUImHe/scYZdH8kD4T70YQuUM=",
+      "System.Collections.Concurrent.wasm": "sha256-Gc0i3Hd/NHGniRjwZQZI/l3qReTZaXwWuILqcVJEXAQ=",
+      "System.Collections.wasm": "sha256-x4D1hKn5if7PX1Dpw3kWKRJsSa6a4L/KlFLy0aat3Lk=",
+      "System.Collections.NonGeneric.wasm": "sha256-6Cq8l9aVyNWIBMK7G9UeFcB98RCF7Vj4+8bylqCeqA8=",
+      "System.Collections.Specialized.wasm": "sha256-0YWznQsJNWyqeOMLa7h5b83ZuuzPckAjbf8zyvu1kkM=",
+      "System.ComponentModel.Annotations.wasm": "sha256-ynu8Tm0YeSO6wAjDANjQmg2KZSDI2rDQ1RGYQoRhGak=",
+      "System.ComponentModel.wasm": "sha256-gkg6YO2ovQeWwX10vqcVc5RQDO5se/BYTmaf0ACjeJI=",
+      "System.ComponentModel.Primitives.wasm": "sha256-OOLTLdq30IUm52WWdvYaVyjHWJfhH9HLbAOAob4T+Uc=",
+      "System.ComponentModel.TypeConverter.wasm": "sha256-sJCiJEpkwujgATkf5gre+9BmmE1M2TTcyTWCdttjWnk=",
+      "System.Console.wasm": "sha256-/kpfeJYNH8T2Cn6/lBcwwzFq/JWr30yDm580V+SK9W8=",
+      "System.wasm": "sha256-492mhhzLM4Jwsr6O0DM3SwiZ+n6AxPzwS+atsn0OmDw=",
+      "System.Linq.wasm": "sha256-NVdqxsIXQbhi6ETgYuMA0c8IRflZSfwSIGSI7mS/Odg=",
+      "System.Linq.Expressions.wasm": "sha256-Wb+j+TCSgV928rdjvtwk3C/Tlm3hejevHFRbv+pRaM4=",
+      "System.ObjectModel.wasm": "sha256-b2dYAXMilBM5yXToDyrjJwcj8ug1BNc9iXy9/6sCDT0=",
+      "System.Private.CoreLib.wasm": "sha256-m4K3Af7YvSFMYhFJYOMHtLAbms28SYYEzDFHN5l77Jg=",
+      "System.Private.Uri.wasm": "sha256-iXB/ojYIVu5KSojkZDEC/et3dCiKQNOulv1jh6unIe4=",
+      "System.Runtime.InteropServices.JavaScript.wasm": "sha256-DHfu1pEYbDMOzA9fyrgrggzBRaB/1bjphnlHrgdhDr4=",
+      "System.Text.RegularExpressions.wasm": "sha256-IjHrsMbfmCph95izkKKFfhy4cFlbaoIe061pVrvREkk="
+    },
+    "vfs": {
+      "runtimeconfig.bin": {
+        "supportFiles/0_runtimeconfig.bin": "sha256-bZVADVE9/vuk4VK9UcMd3AREONFSoWULYacsy5DHL3I="
+      }
+    }
+  },
+  "debugLevel": 0,
+  "globalizationMode": "sharded"
+}
