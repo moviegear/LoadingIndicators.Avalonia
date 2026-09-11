@@ -1,19 +1,16 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="LoadingIndicators.Avalonia.Demo.App"
-
              RequestedThemeVariant="Default">
     <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
-    <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/LoadingIndicators.axaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Application.Resources>
-
     <Application.Styles>
-        <FluentTheme />
-    </Application.Styles>
+        <FluentTheme>
+            <FluentTheme.Palettes>
+                <ColorPaletteResources x:Key="Light" RegionColor="#eeeeee" Accent="#1283b1" />
+                <ColorPaletteResources x:Key="Dark" RegionColor="#2b2b2b" Accent="#119eda" />
+            </FluentTheme.Palettes>
+        </FluentTheme>
+        <StyleInclude Source="avares://LoadingIndicators.Avalonia/LoadingIndicators.axaml" />
+	</Application.Styles>
 </Application>

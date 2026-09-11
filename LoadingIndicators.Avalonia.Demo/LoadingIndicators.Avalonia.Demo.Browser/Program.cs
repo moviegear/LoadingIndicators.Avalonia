@@ -1,18 +1,16 @@
-﻿using Avalonia;
+﻿using System.Threading.Tasks;
+
+using Avalonia;
 using Avalonia.Browser;
-using System.Runtime.Versioning;
-using System.Threading.Tasks;
 
-[assembly: SupportedOSPlatform("browser")]
+using LoadingIndicators.Avalonia.Demo;
 
-namespace LoadingIndicators.Avalonia.Demo.Browser;
-
-internal static partial class Program
+internal sealed partial class Program
 {
-    private static Task Main(string[] args) =>
-        BuildAvaloniaApp()
+    private static Task Main(string[] args) => BuildAvaloniaApp()
             .WithInterFont()
             .StartBrowserAppAsync("out");
 
-    private static AppBuilder BuildAvaloniaApp() => AppBuilder.Configure<App>();
+    public static AppBuilder BuildAvaloniaApp()
+        => AppBuilder.Configure<App>();
 }

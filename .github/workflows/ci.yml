@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    uses: Der-Floh/Der-Floh/.github/workflows/library-ci.yml@v1
+    with:
+      project-path: LoadingIndicators.Avalonia/LoadingIndicators.Avalonia.csproj
+      package-id: LoadingIndicators.Avalonia.New
+      excluded-rule-ids: "112,113"

@@ -1,0 +1,269 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="using:LoadingIndicators.Avalonia">
+
+    <ControlTheme x:Key="Spinner" TargetType="c:LoadingIndicator"
+                  BasedOn="{StaticResource LoadingIndicatorBase}">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border x:Name="PART_Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        IsVisible="{TemplateBinding IsActive}"
+                        IsHitTestVisible="{TemplateBinding IsHitTestVisible}"
+                        ClipToBounds="{TemplateBinding ClipToBounds}">
+
+                    <Border.Styles>
+                        <Style Selector="Viewbox">
+                            <Setter Property="Width" Value="{TemplateBinding Width}" />
+                            <Setter Property="Height" Value="{TemplateBinding Height}" />
+                            <Setter Property="StretchDirection" Value="Both" />
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="0.5" ScaleY="0.5" />
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+
+                        <Style Selector="Line.spoke">
+                            <Setter Property="Stroke" Value="{Binding $parent[c:LoadingIndicator].Foreground}" />
+                            <Setter Property="StrokeThickness" Value="{Binding $parent[c:LoadingIndicator].Thickness}" />
+                            <Setter Property="StrokeLineCap" Value="Round" />
+                            <Setter Property="StartPoint" Value="40,4" />
+                            <Setter Property="EndPoint" Value="40,20" />
+                            <Setter Property="HorizontalAlignment" Value="Stretch" />
+                            <Setter Property="VerticalAlignment" Value="Stretch" />
+                        </Style>
+                    </Border.Styles>
+
+                    <Viewbox>
+                        <Viewbox.Styles>
+                            <Style Selector="c|LoadingIndicator:inactive /template/ Line.spoke" />
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke1">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke2">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="0.083333" /></KeyFrame>
+                                        <KeyFrame Cue="8.333%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="8.334%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0.083333" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke3">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="0.166667" /></KeyFrame>
+                                        <KeyFrame Cue="16.667%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="16.668%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0.166667" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke4">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="0.25" /></KeyFrame>
+                                        <KeyFrame Cue="25%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="25.001%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0.25" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke5">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="0.333333" /></KeyFrame>
+                                        <KeyFrame Cue="33.333%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="33.334%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0.333333" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke6">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="0.416667" /></KeyFrame>
+                                        <KeyFrame Cue="41.667%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="41.668%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0.416667" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke7">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="0.5" /></KeyFrame>
+                                        <KeyFrame Cue="50%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="50.001%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0.5" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke8">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="0.583333" /></KeyFrame>
+                                        <KeyFrame Cue="58.333%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="58.334%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0.583333" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke9">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="0.666667" /></KeyFrame>
+                                        <KeyFrame Cue="66.667%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="66.668%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0.666667" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke10">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="0.75" /></KeyFrame>
+                                        <KeyFrame Cue="75%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="75.001%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0.75" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke11">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="0.833333" /></KeyFrame>
+                                        <KeyFrame Cue="83.333%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="83.334%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0.833333" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Line#Spoke12">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Easing="LinearEasing"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="Opacity" Value="0.916667" /></KeyFrame>
+                                        <KeyFrame Cue="91.667%"><Setter Property="Opacity" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="91.668%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="Opacity" Value="0.916667" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+                        </Viewbox.Styles>
+
+                        <Grid x:Name="SpinnerHost"
+                              Width="80"
+                              Height="80">
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="0" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke1" Classes="spoke" Opacity="0" />
+                            </Grid>
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="-30" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke12" Classes="spoke" Opacity="0" />
+                            </Grid>
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="-60" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke11" Classes="spoke" Opacity="0" />
+                            </Grid>
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="-90" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke10" Classes="spoke" Opacity="0" />
+                            </Grid>
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="-120" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke9" Classes="spoke" Opacity="0" />
+                            </Grid>
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="-150" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke8" Classes="spoke" Opacity="0" />
+                            </Grid>
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="-180" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke7" Classes="spoke" Opacity="0" />
+                            </Grid>
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="-210" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke6" Classes="spoke" Opacity="0" />
+                            </Grid>
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="-240" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke5" Classes="spoke" Opacity="0" />
+                            </Grid>
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="-270" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke4" Classes="spoke" Opacity="0" />
+                            </Grid>
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="-300" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke3" Classes="spoke" Opacity="0" />
+                            </Grid>
+                            <Grid RenderTransformOrigin="50%,50%">
+                                <Grid.RenderTransform><RotateTransform Angle="-330" /></Grid.RenderTransform>
+                                <Line x:Name="Spoke2" Classes="spoke" Opacity="0" />
+                            </Grid>
+                        </Grid>
+                    </Viewbox>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>

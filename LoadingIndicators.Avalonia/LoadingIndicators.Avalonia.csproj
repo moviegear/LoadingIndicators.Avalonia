@@ -1,69 +1,58 @@
-<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFrameworks>net8.0;net7.0;net6.0</TargetFrameworks>
-        <LangVersion>latest</LangVersion>
-        <ImplicitUsings>true</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Title>LoadingIndicators.Avalonia</Title>
-        <Version>11.0.11.1</Version>
-        <Authors>moviegear</Authors>
-        <Description>LoadingIndicators.Avalonia is an adaptation for Avalonia of the LoadingIndicators.WPF collection of 9 animated loading indicators.</Description>
-        <Copyright>moviegear © $([System.DateTime]::Now.Year)</Copyright>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-        <PackageProjectUrl>https://github.com/moviegear/LoadingIndicators.Avalonia/</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/moviegear/LoadingIndicators.Avalonia.git</RepositoryUrl>
-        <RepositoryType>git</RepositoryType>
-        <PackageIcon>icon.png</PackageIcon>
-        <PackageTags>Avalonia, loading, progress, activity</PackageTags>
-        <PackageId>LoadingIndicators.Avalonia</PackageId>
-        <IncludeSymbols>true</IncludeSymbols>
-        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<IsAotCompatible>true</IsAotCompatible>
-    </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DebugType>none</DebugType>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.0.*" />
-    </ItemGroup>
+  <PropertyGroup>
+    <Title>LoadingIndicators.Avalonia</Title>
+    <Version>0.0.0</Version>
+    <Authors>Der_Floh</Authors>
+    <Description>A collection of loading indicators for Avalonia.</Description>
+    <PackageProjectUrl>https://github.com/Der-Floh/LoadingIndicators.Avalonia</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Der-Floh/LoadingIndicators.Avalonia</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Avalonia;Avalonia-UI;Loading-Animation;Loading-Spinner;Loading-Indicator;Loading;Animation</PackageTags>
+    <PackageId>LoadingIndicators.Avalonia.New</PackageId>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <Compile Update="**\*.xaml.cs">
-            <DependentUpon>%(Filename)</DependentUpon>
-        </Compile>
-        <AvaloniaResource Include="**\*.xaml">
-            <SubType>Designer</SubType>
-        </AvaloniaResource>
-        <AvaloniaResource Include="Assets\**" />
-    </ItemGroup>
+  <ItemGroup>
+    <None Include="..\icon.png" Pack="true" PackagePath="\" />
+    <None Include="..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
-    <ItemGroup>
-        <None Include="..\.github\icon.png">
-          <Pack>True</Pack>
-          <PackagePath>\</PackagePath>
-          <Link>icon.png</Link>
-        </None>
-        <None Include="..\README.md">
-            <Pack>True</Pack>
-            <PackagePath>\</PackagePath>
-        </None>
-        <None Include="..\LICENSE.md">
-            <Pack>True</Pack>
-            <PackagePath>\</PackagePath>
-        </None>
-    </ItemGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
 
-    <Target Name="PreparePackageReleaseNotesFromFile" BeforeTargets="GenerateNuspec">
-        <ReadLinesFromFile File="../RELEASE-NOTES.txt">
-            <Output TaskParameter="Lines" ItemName="ReleaseNoteLines" />
-        </ReadLinesFromFile>
-        <PropertyGroup>
-            <PackageReleaseNotes>$([System.IO.File]::ReadAllText("../RELEASE-NOTES.txt"))</PackageReleaseNotes>
-        </PropertyGroup>
-    </Target>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="[11.1.0,12.0.0)" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
+    <PackageReference Include="Avalonia" Version="[12.0.0,)" Condition="'$(TargetFramework)' == 'net8.0'" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.300">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,5 @@
+﻿<Solution>
+  <Project Path="LoadingIndicators.Avalonia.Demo.Browser/LoadingIndicators.Avalonia.Demo.Browser.csproj" />
+  <Project Path="LoadingIndicators.Avalonia.Demo.Desktop/LoadingIndicators.Avalonia.Demo.Desktop.csproj" />
+  <Project Path="LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.csproj" />
+</Solution>

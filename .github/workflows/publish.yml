@@ -1,0 +1,76 @@
+name: Publish NuGet Package
+
+on:
+  release:
+    types: [published]
+
+concurrency:
+  group: nuget-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+env:
+  PROJECT_PATH: LoadingIndicators.Avalonia/LoadingIndicators.Avalonia.csproj
+  PACKAGE_ID: LoadingIndicators.Avalonia.New
+  ARTIFACTS_PATH: artifacts
+  EXCLUDED_RULE_IDS: "112,113"
+  NUGET_USER: Der-Floh
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Resolve version
+        id: version
+        uses: Der-Floh/Der-Floh/.github/actions/resolve-version@v1
+        with:
+          tag: ${{ github.event.release.tag_name }}
+
+      - name: Setup .NET
+        uses: Der-Floh/Der-Floh/.github/actions/setup-dotnet@v1
+
+      - name: Pack
+        uses: Der-Floh/Der-Floh/.github/actions/pack@v1
+        with:
+          project-path: ${{ env.PROJECT_PATH }}
+          version: ${{ steps.version.outputs.value }}
+          output-dir: ${{ env.ARTIFACTS_PATH }}
+
+      - name: Verify package
+        id: package
+        uses: Der-Floh/Der-Floh/.github/actions/verify-package@v1
+        with:
+          package-dir: ${{ env.ARTIFACTS_PATH }}
+          package-id: ${{ env.PACKAGE_ID }}
+          version: ${{ steps.version.outputs.value }}
+          excluded-rule-ids: ${{ env.EXCLUDED_RULE_IDS }}
+
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v3
+        with:
+          fail_on_unmatched_files: true
+          files: |
+            ./${{ env.ARTIFACTS_PATH }}/*.nupkg
+            ./${{ env.ARTIFACTS_PATH }}/*.snupkg
+
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@v4
+        with:
+          subject-path: |
+            ./${{ env.ARTIFACTS_PATH }}/*.nupkg
+            ./${{ env.ARTIFACTS_PATH }}/*.snupkg
+
+      - name: Publish to NuGet.org
+        uses: Der-Floh/Der-Floh/.github/actions/publish-nuget@v1
+        with:
+          package-path: ${{ steps.package.outputs.package-path }}
+          symbols-path: ${{ steps.package.outputs.symbols-path }}
+          nuget-user: ${{ env.NUGET_USER }}

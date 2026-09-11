@@ -1,0 +1,325 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="using:LoadingIndicators.Avalonia">
+
+    <ControlTheme x:Key="Grid" TargetType="c:LoadingIndicator"
+                  BasedOn="{StaticResource LoadingIndicatorBase}">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border x:Name="PART_Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        IsVisible="{TemplateBinding IsActive}"
+                        IsHitTestVisible="{TemplateBinding IsHitTestVisible}"
+                        ClipToBounds="{TemplateBinding ClipToBounds}">
+
+                    <Border.Styles>
+                        <Style Selector="Viewbox">
+                            <Setter Property="Width" Value="{TemplateBinding Width}" />
+                            <Setter Property="Height" Value="{TemplateBinding Height}" />
+                            <Setter Property="StretchDirection" Value="Both" />
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="0.5" ScaleY="0.5" />
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+
+                        <Style Selector="Rectangle">
+                            <Setter Property="Margin" Value="-1" />
+                            <Setter Property="RenderTransformOrigin" Value="50%,50%" />
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Border.Styles>
+
+                    <Viewbox>
+                        <Viewbox.Styles>
+                            <Style Selector="c|LoadingIndicator:inactive /template/ Rectangle" />
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle1">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Delay="0:0:0.200"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="5%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="10%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="15%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="20%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="25%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="30%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="35%"><Setter Property="ScaleTransform.ScaleX" Value="0" /><Setter Property="ScaleTransform.ScaleY" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="40%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="45%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="50%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="55%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="60%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="65%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="70%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle2">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Delay="0:0:0.300"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="5%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="10%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="15%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="20%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="25%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="30%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="35%"><Setter Property="ScaleTransform.ScaleX" Value="0" /><Setter Property="ScaleTransform.ScaleY" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="40%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="45%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="50%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="55%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="60%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="65%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="70%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle3">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Delay="0:0:0.400"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="5%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="10%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="15%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="20%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="25%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="30%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="35%"><Setter Property="ScaleTransform.ScaleX" Value="0" /><Setter Property="ScaleTransform.ScaleY" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="40%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="45%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="50%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="55%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="60%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="65%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="70%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle4">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Delay="0:0:0.100"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="5%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="10%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="15%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="20%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="25%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="30%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="35%"><Setter Property="ScaleTransform.ScaleX" Value="0" /><Setter Property="ScaleTransform.ScaleY" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="40%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="45%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="50%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="55%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="60%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="65%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="70%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle5">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Delay="0:0:0.200"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="5%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="10%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="15%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="20%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="25%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="30%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="35%"><Setter Property="ScaleTransform.ScaleX" Value="0" /><Setter Property="ScaleTransform.ScaleY" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="40%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="45%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="50%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="55%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="60%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="65%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="70%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle6">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Delay="0:0:0.300"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="5%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="10%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="15%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="20%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="25%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="30%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="35%"><Setter Property="ScaleTransform.ScaleX" Value="0" /><Setter Property="ScaleTransform.ScaleY" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="40%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="45%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="50%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="55%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="60%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="65%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="70%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle7">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="5%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="10%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="15%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="20%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="25%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="30%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="35%"><Setter Property="ScaleTransform.ScaleX" Value="0" /><Setter Property="ScaleTransform.ScaleY" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="40%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="45%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="50%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="55%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="60%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="65%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="70%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle8">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Delay="0:0:0.100"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="5%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="10%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="15%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="20%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="25%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="30%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="35%"><Setter Property="ScaleTransform.ScaleX" Value="0" /><Setter Property="ScaleTransform.ScaleY" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="40%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="45%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="50%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="55%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="60%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="65%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="70%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Rectangle#Rectangle9">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.200"
+                                               Delay="0:0:0.200"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="5%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="10%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="15%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="20%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="25%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="30%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="35%"><Setter Property="ScaleTransform.ScaleX" Value="0" /><Setter Property="ScaleTransform.ScaleY" Value="0" /></KeyFrame>
+                                        <KeyFrame Cue="40%"><Setter Property="ScaleTransform.ScaleX" Value="0.040904" /><Setter Property="ScaleTransform.ScaleY" Value="0.040904" /></KeyFrame>
+                                        <KeyFrame Cue="45%"><Setter Property="ScaleTransform.ScaleX" Value="0.169702" /><Setter Property="ScaleTransform.ScaleY" Value="0.169702" /></KeyFrame>
+                                        <KeyFrame Cue="50%"><Setter Property="ScaleTransform.ScaleX" Value="0.378431" /><Setter Property="ScaleTransform.ScaleY" Value="0.378431" /></KeyFrame>
+                                        <KeyFrame Cue="55%"><Setter Property="ScaleTransform.ScaleX" Value="0.621569" /><Setter Property="ScaleTransform.ScaleY" Value="0.621569" /></KeyFrame>
+                                        <KeyFrame Cue="60%"><Setter Property="ScaleTransform.ScaleX" Value="0.830298" /><Setter Property="ScaleTransform.ScaleY" Value="0.830298" /></KeyFrame>
+                                        <KeyFrame Cue="65%"><Setter Property="ScaleTransform.ScaleX" Value="0.959096" /><Setter Property="ScaleTransform.ScaleY" Value="0.959096" /></KeyFrame>
+                                        <KeyFrame Cue="70%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                        <KeyFrame Cue="100%"><Setter Property="ScaleTransform.ScaleX" Value="1" /><Setter Property="ScaleTransform.ScaleY" Value="1" /></KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+                        </Viewbox.Styles>
+
+                        <Grid Width="120"
+                              Height="120"
+                              ColumnDefinitions="*,*,*"
+                              RowDefinitions="*,*,*">
+                            <Rectangle x:Name="Rectangle1"
+                                       Fill="{TemplateBinding Foreground}"
+                                       Grid.Row="0"
+                                       Grid.Column="0" />
+                            <Rectangle x:Name="Rectangle2"
+                                       Fill="{TemplateBinding Foreground}"
+                                       Grid.Row="0"
+                                       Grid.Column="1" />
+                            <Rectangle x:Name="Rectangle3"
+                                       Fill="{TemplateBinding Foreground}"
+                                       Grid.Row="0"
+                                       Grid.Column="2" />
+                            <Rectangle x:Name="Rectangle4"
+                                       Fill="{TemplateBinding Foreground}"
+                                       Grid.Row="1"
+                                       Grid.Column="0" />
+                            <Rectangle x:Name="Rectangle5"
+                                       Fill="{TemplateBinding Foreground}"
+                                       Grid.Row="1"
+                                       Grid.Column="1" />
+                            <Rectangle x:Name="Rectangle6"
+                                       Fill="{TemplateBinding Foreground}"
+                                       Grid.Row="1"
+                                       Grid.Column="2" />
+                            <Rectangle x:Name="Rectangle7"
+                                       Fill="{TemplateBinding Foreground}"
+                                       Grid.Row="2"
+                                       Grid.Column="0" />
+                            <Rectangle x:Name="Rectangle8"
+                                       Fill="{TemplateBinding Foreground}"
+                                       Grid.Row="2"
+                                       Grid.Column="1" />
+                            <Rectangle x:Name="Rectangle9"
+                                       Fill="{TemplateBinding Foreground}"
+                                       Grid.Row="2"
+                                       Grid.Column="2" />
+                        </Grid>
+                    </Viewbox>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>

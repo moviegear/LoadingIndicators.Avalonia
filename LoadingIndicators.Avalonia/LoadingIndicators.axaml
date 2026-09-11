@@ -1,15 +1,32 @@
-﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceInclude Source="Themes/Arc.axaml" />
-        <ResourceInclude Source="Themes/Arcs.axaml" />
-        <ResourceInclude Source="Themes/ArcsRing.axaml" />
-        <ResourceInclude Source="Themes/DoubleBounce.axaml" />
-        <ResourceInclude Source="Themes/FlipPlane.axaml" />
-        <ResourceInclude Source="Themes/Pulse.axaml" />
-        <ResourceInclude Source="Themes/Ring.axaml" />
-        <ResourceInclude Source="Themes/ThreeDots.axaml" />
-        <ResourceInclude Source="Themes/Wave.axaml" />
-    </ResourceDictionary.MergedDictionaries>
-</ResourceDictionary>
+    <Styles.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/_Base.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Arc.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/ArcEase.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/ArcGrow.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Arcs.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/ArcsRing.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Bounce.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Plane.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Pulse.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Circle.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Flow.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Wave.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Chase.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/CircleFade.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Swing.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Grid.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Fold.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Wander.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/DualRing.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Ripple.axaml" />
+                <ResourceInclude Source="avares://LoadingIndicators.Avalonia/Themes/Spinner.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Styles.Resources>
+
+</Styles>

@@ -1,41 +1,25 @@
 name: Deploy to GitHub Pages
 
-env:
-  PROJECT_PATH: LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.Browser/LoadingIndicators.Avalonia.Demo.Browser.csproj
-  OUTPUT_PATH: LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.Browser/bin/Release/net8.0/browser-wasm/AppBundle
 on:
-  push:
-    branches: [ master ]
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to publish (e.g. 4.0.3). Defaults to the latest release tag.
+        required: false
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
 
 jobs:
   deploy-to-github-pages:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup .NET 8
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-
-      - name: Install wasm-tools
-        run: dotnet workload install wasm-tools wasm-experimental
-
-      - name: Publish .NET Project
-        run: dotnet publish $PROJECT_PATH -c Release --output release --nologo
-
-      - name: Change base-tag in index.html
-        run: sed -i 's/<base href="\/" \/>/<base href="\/LoadingIndicators.Avalonia\/" \/>/g' $OUTPUT_PATH/index.html
-
-      - name: copy index.html to 404.html
-        run: cp $OUTPUT_PATH/index.html $OUTPUT_PATH/404.html
-
-      - name: Add .nojekyll file
-        run: touch $OUTPUT_PATH/.nojekyll
-
-      - name: Uploading files to gh-pages branch
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          token: ${{ secrets.TOKEN }}
-          branch: gh-pages
-          folder: ${{ env.OUTPUT_PATH }}
+    uses: Der-Floh/Der-Floh/.github/workflows/app-pages.yml@v1
+    with:
+      project-path: LoadingIndicators.Avalonia.Demo/LoadingIndicators.Avalonia.Demo.Browser/LoadingIndicators.Avalonia.Demo.Browser.csproj
+      version: ${{ inputs.version }}

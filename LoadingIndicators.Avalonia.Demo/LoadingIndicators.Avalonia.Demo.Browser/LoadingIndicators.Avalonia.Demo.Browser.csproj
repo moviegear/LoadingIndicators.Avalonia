@@ -1,20 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
-        <WasmMainJSPath>AppBundle\main.js</WasmMainJSPath>
-        <OutputType>Exe</OutputType>
-    </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+  <PropertyGroup>
+    <TargetFramework>net10.0-browser</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+    <RunAOTCompilation>true</RunAOTCompilation>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <WasmExtraFilesToDeploy Include="AppBundle\**"/>
-    </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Browser" />
+  </ItemGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Avalonia.Browser" Version="$(AvaloniaVersion)"/>
-    </ItemGroup>
-
-    <ItemGroup>
-        <ProjectReference Include="..\LoadingIndicators.Avalonia.Demo\LoadingIndicators.Avalonia.Demo.csproj"/>
-    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoadingIndicators.Avalonia.Demo\LoadingIndicators.Avalonia.Demo.csproj" />
+  </ItemGroup>
 </Project>

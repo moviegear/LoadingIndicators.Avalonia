@@ -1,0 +1,128 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="using:LoadingIndicators.Avalonia">
+
+    <ControlTheme x:Key="Ripple" TargetType="c:LoadingIndicator"
+                  BasedOn="{StaticResource LoadingIndicatorBase}">
+        <Setter Property="Thickness" Value="5" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border x:Name="PART_Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        IsVisible="{TemplateBinding IsActive}"
+                        IsHitTestVisible="{TemplateBinding IsHitTestVisible}"
+                        ClipToBounds="{TemplateBinding ClipToBounds}">
+
+                    <Border.Styles>
+                        <Style Selector="Viewbox">
+                            <Setter Property="Width" Value="{TemplateBinding Width}" />
+                            <Setter Property="Height" Value="{TemplateBinding Height}" />
+                            <Setter Property="StretchDirection" Value="Both" />
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="0.5" ScaleY="0.5" />
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+
+                        <Style Selector="Ellipse">
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                            <Setter Property="Width" Value="80" />
+                            <Setter Property="Height" Value="80" />
+                            <Setter Property="Fill" Value="Transparent" />
+                            <Setter Property="Stroke" Value="{Binding $parent[c:LoadingIndicator].Foreground}" />
+                            <Setter Property="StrokeThickness" Value="{Binding $parent[c:LoadingIndicator].Thickness}" />
+                            <Setter Property="Opacity" Value="0" />
+                            <Setter Property="RenderTransformOrigin" Value="50%,50%" />
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="0.1" ScaleY="0.1" />
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Border.Styles>
+
+                    <Viewbox>
+                        <Viewbox.Styles>
+                            <Style Selector="c|LoadingIndicator:inactive /template/ Ellipse" />
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ring1">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.000"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%">
+                                            <Setter Property="ScaleTransform.ScaleX" Value="0.1" />
+                                            <Setter Property="ScaleTransform.ScaleY" Value="0.1" />
+                                            <Setter Property="Opacity" Value="0" />
+                                        </KeyFrame>
+
+                                        <KeyFrame Cue="4.9%">
+                                            <Setter Property="ScaleTransform.ScaleX" Value="0.1" />
+                                            <Setter Property="ScaleTransform.ScaleY" Value="0.1" />
+                                            <Setter Property="Opacity" Value="0" />
+                                        </KeyFrame>
+
+                                        <KeyFrame Cue="5%">
+                                            <Setter Property="ScaleTransform.ScaleX" Value="0.1" />
+                                            <Setter Property="ScaleTransform.ScaleY" Value="0.1" />
+                                            <Setter Property="Opacity" Value="1" />
+                                        </KeyFrame>
+
+                                        <KeyFrame Cue="100%">
+                                            <Setter Property="ScaleTransform.ScaleX" Value="1" />
+                                            <Setter Property="ScaleTransform.ScaleY" Value="1" />
+                                            <Setter Property="Opacity" Value="0" />
+                                        </KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+
+                            <Style Selector="c|LoadingIndicator:active /template/ Ellipse#Ring2">
+                                <Style.Animations>
+                                    <Animation Duration="0:0:1.000"
+                                               Delay="0:0:0.500"
+                                               IterationCount="Infinite"
+                                               SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <KeyFrame Cue="0%">
+                                            <Setter Property="ScaleTransform.ScaleX" Value="0.1" />
+                                            <Setter Property="ScaleTransform.ScaleY" Value="0.1" />
+                                            <Setter Property="Opacity" Value="0" />
+                                        </KeyFrame>
+
+                                        <KeyFrame Cue="4.9%">
+                                            <Setter Property="ScaleTransform.ScaleX" Value="0.1" />
+                                            <Setter Property="ScaleTransform.ScaleY" Value="0.1" />
+                                            <Setter Property="Opacity" Value="0" />
+                                        </KeyFrame>
+
+                                        <KeyFrame Cue="5%">
+                                            <Setter Property="ScaleTransform.ScaleX" Value="0.1" />
+                                            <Setter Property="ScaleTransform.ScaleY" Value="0.1" />
+                                            <Setter Property="Opacity" Value="1" />
+                                        </KeyFrame>
+
+                                        <KeyFrame Cue="100%">
+                                            <Setter Property="ScaleTransform.ScaleX" Value="1" />
+                                            <Setter Property="ScaleTransform.ScaleY" Value="1" />
+                                            <Setter Property="Opacity" Value="0" />
+                                        </KeyFrame>
+                                    </Animation>
+                                </Style.Animations>
+                            </Style>
+                        </Viewbox.Styles>
+
+                        <Grid Width="80" Height="80">
+                            <Ellipse x:Name="Ring1" />
+                            <Ellipse x:Name="Ring2" />
+                        </Grid>
+                    </Viewbox>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>

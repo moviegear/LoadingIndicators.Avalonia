@@ -2,29 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:c="using:LoadingIndicators.Avalonia">
 
-    <Design.PreviewWith>
-        <Border Width="256" Height="256"
-                Background="#333333">
-
-            <c:LoadingIndicator Foreground="Chartreuse"
-                                BorderBrush="DarkRed"
-                                BorderThickness="1"
-                                Theme="{DynamicResource FlipPlane}"
-                                IsActive="True"
-                                Mode="FlipPlane"
-                                SpeedRatio="1" />
-        </Border>
-    </Design.PreviewWith>
-
-    <ControlTheme x:Key="FlipPlane" TargetType="c:LoadingIndicator">
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="Foreground" Value="#CC119EDA" />
-        <Setter Property="Width" Value="{Binding $parent[c:LoadingIndicator].Bounds.Width}" />
-        <Setter Property="Height" Value="{Binding $parent[c:LoadingIndicator].Bounds.Height}" />
-        <Setter Property="MinWidth" Value="64" />
-        <Setter Property="MinHeight" Value="64" />
-        <Setter Property="IsHitTestVisible" Value="False" />
-        <Setter Property="ClipToBounds" Value="True" />
+    <ControlTheme x:Key="Plane" TargetType="c:LoadingIndicator"
+                  BasedOn="{StaticResource LoadingIndicatorBase}">
         <Setter Property="Template">
             <ControlTemplate>
                 <Border x:Name="PART_Border"
@@ -50,8 +29,14 @@
 
                         <Style Selector="Rectangle">
                             <Setter Property="Margin" Value="5" />
-                            <Setter Property="MinWidth" Value="{TemplateBinding MinWidth}" />
-                            <Setter Property="MinHeight" Value="{TemplateBinding MinHeight}" />
+                            <Setter Property="MinWidth" Value="64" />
+                            <Setter Property="MinHeight" Value="64" />
+                            <Setter Property="RenderTransformOrigin" Value="50%,50%" />
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                                </Setter.Value>
+                            </Setter>
                         </Style>
                     </Border.Styles>
 
@@ -61,9 +46,12 @@
 
                             <Style Selector="c|LoadingIndicator:active /template/ Rectangle">
                                 <Style.Animations>
-                                    <Animation Duration="0:0:2.000"
+                                    <Animation Duration="0:0:1.200"
                                                IterationCount="Infinite"
                                                SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <Animation.Easing>
+                                            <SplineEasing X1="0.42" Y1="0" X2="0.58" Y2="1" />
+                                        </Animation.Easing>
 
                                         <KeyFrame Cue="0%">
                                             <Setter Property="ScaleTransform.ScaleY" Value="1" />
@@ -78,10 +66,13 @@
                                         </KeyFrame>
                                     </Animation>
 
-                                    <Animation Duration="0:0:2.000"
-                                               Delay="0:0:1.000"
+                                    <Animation Duration="0:0:1.200"
+                                               Delay="0:0:0.600"
                                                IterationCount="Infinite"
                                                SpeedRatio="{Binding $parent[c:LoadingIndicator].SpeedRatio}">
+                                        <Animation.Easing>
+                                            <SplineEasing X1="0.42" Y1="0" X2="0.58" Y2="1" />
+                                        </Animation.Easing>
 
                                         <KeyFrame Cue="0%">
                                             <Setter Property="ScaleTransform.ScaleX" Value="1" />
